@@ -263,7 +263,6 @@
         }
         formData.append(options.inputName, file._file.slice(start, uploadedChunks < file.totalChunks - 1 ? start + chunkSize : file.size));
         xhr.open('POST', url);
-        xhr.timeout = 60000;
         xhr.send(formData);
     }
   };
